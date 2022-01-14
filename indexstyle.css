@@ -2,3 +2,14 @@ body{
     background-color: #36393e;
     color: #e6e6e6;
 }
+
+.entries{
+    float:right;
+}
+
+span{
+    color: aqua;
+    border-spacing: 12px;
+    font-size: 16px;
+    cursor: pointer;
+}
