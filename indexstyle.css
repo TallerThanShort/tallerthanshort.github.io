@@ -13,3 +13,7 @@ span{
     font-size: 16px;
     cursor: pointer;
 }
+
+entry-1 entry-2 entry-3 {
+    display: grid;
+}
