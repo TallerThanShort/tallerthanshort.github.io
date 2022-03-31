@@ -7,21 +7,13 @@ a{
     color: aqua;
 }
 
-.buttons{
-    position: absolute;
-    left: 55%;
-    top: 40%;
-    width: 60%;
-    transform: translate(-50%, -50%);
-    padding: 10px;
-}
 
 #returnButton{
     font-family: "Roboto", sans-serif;
     text-transform: uppercase;
     outline: 0;
-    background: #7289DA;
-    width: 75%;
+    background: #1100ff;
+    width: 100%;
     border: 0;
     padding: 15px;
     color: aliceblue;
