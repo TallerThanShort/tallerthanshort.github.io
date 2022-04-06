@@ -1,0 +1,23 @@
+body{
+    background-color: #36393e;
+    color: #e6e6e6;
+}
+
+a{
+    color: aqua;
+}
+
+
+#returnButton{
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: #1100ff;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: aliceblue;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 10px;
+}
