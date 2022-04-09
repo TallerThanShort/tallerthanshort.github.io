@@ -4,20 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="dlstyle.css">
+    <link rel="stylesheet" href="tbistyle.css">
     <title>TallBot - Info | TallerThanShort's Blog</title>
 </head>
 <body>
     <h1>I'm Taller than a Bot</h1>
-    <p id="upload-date">March 7th, 2022</p>
+    <p id="upload-date">March 7th, 2022; Updated April 9th, 2022</p>
     <hr>
     <p>So, you've heard what I've decided to do; Leave Discord</p>
     <br>
-    <h3>Invite</h3>
-    <p>Don't worry tho, you will still here from me, using <a href="https://discord.com/oauth2/authorize?client_id=947043098746310656&scope=bot&permissions=537119808">TallBot</a></p>
-    <br>
+    <p>Don't worry tho, you will still here from me, using <span onclick="document.location.href = 'https://tallerthanshort.github.io/entries/tallbot-info/#invite';">TallBot</span></p>
     <p>Hopefully here I can clarify what some of the perms the bot uses are, and why they are needed.</p>
     <br>
+    <h3>Permissions</h3>
     <ul>
         <li>MANAGE_WEBHOOKS</li>
         <p>This is by far one of the bots most imprtant permissions. It's completely optional, yet also somewhat necessary. Let me explain: The bot needs this permission to view the webhooks and manage them, in some cases create new ones or delete old ones. The bot does this to ensure I can communicate in yer guild's individual channels. It will not abuse this tho.</p>
@@ -32,6 +31,32 @@
     </ul>
     <br>
     <p>I hope this clarified all of the perms the bot requires to function properly. The only permission that is classed as 'elevated' is MANAGE_WEBHOOKS and, freely, you can deny it that perm.</p>
+    <p>Now to explain what the bot actually does.</p>
+    <br>
+    <h3>Bot Workings</h3>
+    <p>So, how <i>exactly</i> does TallBot work?</p>
+    <ul>
+        <h4>Discord Bot</h4>
+        <li>Receive Messages</li>
+        <p>TallBot on Discord receives the messages. It can fully receive commands, reply to them using it's predefined commands, and shows me the message history (messages up to 14 days old) on a localhost version of BFC (modified to receive events from TallBot on Discord and Revolt)</p>
+        <li>Manage Webhooks</li>
+        <p>The bot can also manage webhooks, so that it can ensure the messages can be sent. It check them around every 23h. If they are usuable, or available where the bot can see, it checks a box, which is viewable on the localhost site. It can also move the webhooks between channels, but currently I need the guild owner or a member within a guild to send me the channel ID's.</p>
+        <li>Embed Media Links</li>
+        <p>When I want to send a link, TallBot does a check to see if it matches any image CDN I use (primarily ggpht.ga, although Firebase Storage is another one), and will send the link <i>itself</i> rather than via a webhook, to ensure the media is attached, or not (depending on if you allow it the permissions mentioned above!)</p>
+        <li>Send Media</li>
+        <p>Similar to the above, TallBot will also check if I'm sending media (.png, .txt, .mp4, .mp3 and .m4a only), and send said media itself, rather than webhooking that data.</p>
+        <h4>Revolt Bot</h4>
+        <p>This section is still a WIP while I learn revolt-api and Firebase-sdk v9</p>
+        <li>Future Ideas</li>
+        <ul>
+            <li>Send the messages in a private Revolt Server</li>
+            <li>Allow me to reply by checking if it's my ID sending the message in the private server and then forward it back to Discord in the corresponding guild. (separated by channel._id and a matching guild.id)</li>
+            <p>Basically move from a localhost client to a private Revolt to Discord Bridge</p>
+        </ul>
+    </ul>
+    <br>
+    <h3>Invite</h3>
+    <p>So, what are you waiting for? To chat with me on Discord again, simply add <span onclick="document.location.href = 'https://discord.com/oauth2/authorize?client_id=947043098746310656&scope=bot&permissions=537119808';">TallBot by clicking here!</span></p>
     <hr>
     <div class="buttons">
         <button id="returnButton" style="width:100%;" onclick="location.href='https://tallerthanshort.github.io/';">return to start</button>

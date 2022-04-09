@@ -1,10 +1,19 @@
 body{
-    background-color: #36393e;
-    color: #e6e6e6;
+    background-color: #151515;
+    color: #eaeaea;
 }
 
-a{
+span{
     color: aqua;
+    cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #b5e853;
+}
+
+h1:before {
+    content:"./ ";
 }
 
 
@@ -20,4 +29,8 @@ a{
     font-size: 14px;
     cursor: pointer;
     border-radius: 10px;
+}
+
+#returnButton:hover {
+    background: #0a027c
 }
