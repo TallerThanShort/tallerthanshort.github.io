@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="indexstyle.css">
+    <title>TallerThanShort's Dumb Blog</title>
+    <meta name="description" content="The dumbest blog on the internet | TTS is Dumb">
+    <link rel="icon" href="http://tallerthanshort.github.io/ut3.ggpht/icons/FUCL_new.png" data-react-helmet="true">
+</head>
+<body>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
+    <script>
+const firebaseConfig = {
+  apiKey: "AIzaSyCLbkhREuE47oTfa8A98vJ-7KwA55DdqBU",
+  authDomain: "what-block.firebaseapp.com",
+  projectId: "what-block",
+  storageBucket: "what-block.appspot.com",
+  messagingSenderId: "30475081786",
+  appId: "1:30475081786:web:b43d44bde6bc02cadbfd03"
+};
+
+const app = initializeApp(firebaseConfig);
+const store = firebase.firestore();
+store.settings({ timestampsInSnapshots: true });
+    </script>
+</body>
+</html>
