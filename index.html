@@ -12,26 +12,36 @@
 <body>
     <h1>TallerThanShort's Blog</h1>
     <hr>
-    <div id="entries">
-        <div id="entry-1">
-            <span onclick="document.location.href = 'https://tallerthanshort.github.io/entries/#entry=elo';">First post/intro</span>
-        </div>
-        <br>
-        <div id="entry-2">
-            <span onclick="document.location.href = 'https://tallerthanshort.github.io/entries/#entry=CKS';">Leaving CKS</span>
-        </div>
-        <br>
-        <div id="entry-3">
-            <span onclick="document.location.href = 'https://tallerthanshort.github.io/entries/#entry=Bye-Discord';">Leaving Discord</span>
-        </div>
-        <br>
-        <div id="entry-4">
-            <span onclick="document.location.href = 'https://tallerthanshort.github.io/entries/#entry=ilied';">I lied</span>
-        </div>
-        <br> <!-- ur kidding right? -->
-        <div id="entry-5">
-            <span onclick="document.location.href = 'https://tallerthanshort.github.io/entries/#entry=updated-blog';">I updated this blog</span>
-        </div>
-    </div>
+    <div id="entries"></div>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
+    <script>
+const firebaseConfig = {
+  apiKey: "AIzaSyCLbkhREuE47oTfa8A98vJ-7KwA55DdqBU",
+  authDomain: "what-block.firebaseapp.com",
+  projectId: "what-block",
+  storageBucket: "what-block.appspot.com",
+  messagingSenderId: "30475081786",
+  appId: "1:30475081786:web:b43d44bde6bc02cadbfd03"
+};
+
+firebase.initializeApp(firebaseConfig);
+const store = firebase.firestore();
+store.settings({ timestampsInSnapshots: true });
+    </script>
+    <script>
+store.collection('entries').orderBy("pnum").get().then(snapshot => {
+         setupSite(snapshot.docs);
+            });
+        const setupSite = (data) => {
+            let html = ``;
+           data.forEach(doc => {
+                    const entry = doc.data();
+                    const list =`<a href="https://tallerthanshort.github.io/entries/#entry=${entry.path}">${entry.title}</a><br><br>`;
+                    html += list;
+                });
+                document.getElementById("entries").innerHTML += html
+        }
+        </script>
 </body>
 </html>
