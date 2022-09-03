@@ -4,10 +4,10 @@ body{
 }
 
 .entries{
-    float:right;
+    float: right;
 }
 
-span{
+span, a{
     color: aqua;
     border-spacing: 12px;
     font-size: 16px;
