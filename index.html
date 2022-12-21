@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="indexstyle.css">
-    <title>TallerThanShort's Dumb Blog</title>
-    <meta name="description" content="The dumbest blog on github | TTS is Dumb">
+    <title>TallerThanShort's Blog</title>
+    <meta name="description" content="Emotional Damage, Hackintosh, General Updates, Psychology - This blog has it all">
     <link rel="icon" href="http://tallerthanshort.github.io/ut3.ggpht/icons/FUCL_new.png" data-react-helmet="true">
 </head>
 <body>
@@ -42,15 +42,6 @@ store.collection('entries').orderBy("pnum").get().then(snapshot => {
                 });
                 document.getElementById("entries").innerHTML = html
         }
-        </script>
-        <script>
-            window.onload = () => {
-                const fragment = new URLSearchParams(window.location.search.slice(1));
-                const acutheRedir = fragment.get('acuthe');
-                if(acutheRedir != null){
-                    location.href = 'https://tallerthanshort.github.io/acuthe';
-                }
-            }
         </script>
 </body>
 </html>
