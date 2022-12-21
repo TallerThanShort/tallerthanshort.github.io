@@ -37,7 +37,7 @@ store.collection('entries').orderBy("pnum").get().then(snapshot => {
             let html = ``;
            data.forEach(doc => {
                     const entry = doc.data();
-                    const list =`<a href="https://tallerthanshort.github.io/entries/#entry=${entry.path}">${entry.title}</a><br><br>`;
+                    const list =`<a href="https://tallerthanshort.github.io/entries/?entry=${entry.path}">${entry.title}</a><br><br>`;
                     html += list;
                 });
                 document.getElementById("entries").innerHTML = html
