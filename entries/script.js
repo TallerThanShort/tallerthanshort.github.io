@@ -1,5 +1,5 @@
 window.onload = function(){
-    const fragment = new URLSearchParams(window.location.hash.slice(1));
+    const fragment = new URLSearchParams(window.location.search.slice(1));
     const entry = fragment.get('entry');
 
     if(entry != null){
