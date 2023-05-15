@@ -30,7 +30,7 @@ const store = firebase.firestore();
 store.settings({ timestampsInSnapshots: true });
     </script>
     <script>
-store.collection('entries').orderBy("pnum").get().then(snapshot => {
+store.collection('entries').orderBy("pnum", "desc").get().then(snapshot => {
          setupSite(snapshot.docs);
             });
         const setupSite = (data) => {
