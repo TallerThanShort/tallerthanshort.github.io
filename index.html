@@ -8,27 +8,31 @@
     <title>TallerThanShort's Blog</title>
     <meta name="description" content="Emotional Damage, Hackintosh, General Updates, Psychology - This blog has it all">
     <link rel="icon" href="http://tallerthanshort.github.io/ut3.ggpht/icons/FUCL_new.png" data-react-helmet="true">
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
+    <script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyCLbkhREuE47oTfa8A98vJ-7KwA55DdqBU",
+        authDomain: "what-block.firebaseapp.com",
+        projectId: "what-block",
+        storageBucket: "what-block.appspot.com",
+        messagingSenderId: "30475081786",
+        appId: "1:30475081786:web:b43d44bde6bc02cadbfd03"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    const store = firebase.firestore();
+    </script>
 </head>
 <body>
     <h1>TallerThanShort's Blog</h1>
     <hr>
-    <div id="entries"><p>Loading...</p></div>
-    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
-    <script>
-const firebaseConfig = {
-  apiKey: "AIzaSyCLbkhREuE47oTfa8A98vJ-7KwA55DdqBU",
-  authDomain: "what-block.firebaseapp.com",
-  projectId: "what-block",
-  storageBucket: "what-block.appspot.com",
-  messagingSenderId: "30475081786",
-  appId: "1:30475081786:web:b43d44bde6bc02cadbfd03"
-};
-
-firebase.initializeApp(firebaseConfig);
-const store = firebase.firestore();
-store.settings({ timestampsInSnapshots: true });
-    </script>
+    <div id="warnBlock" style="background-color: black; padding: 1px; border-left: 4px solid #ffff00; border-radius: 10px 10px 10px 10px;">
+        <h3 style="padding-left: 6px; text-decoration: wavy underline;">Notice:</h3>
+        <p style="padding-left: 6px;">Me blog is moving (<b>permanently</b>) to <a href="https://tallerthanshort.is-a.dev/blog">tallerthanshort.is-a.dev/blog</a></p>
+        <p style="padding-left: 6px; font-size: smaller;"><i>Make sure to update your bookmarks! <a href="https://tallerthanshort.github.io/entries/?entry=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa">More Info</a></i></p>
+    </div>
+    <div id="entries" style="padding-top: 1rem;"><p>Loading...</p></div>
     <script>
 store.collection('entries').orderBy("pnum", "desc").get().then(snapshot => {
          setupSite(snapshot.docs);

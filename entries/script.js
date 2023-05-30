@@ -10,5 +10,7 @@ window.onload = function(){
                     document.body.innerHTML = `${doc.data().content}`;
             });
         })
+    } else {
+        location.href='/'
     }
 }
